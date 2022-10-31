@@ -1,0 +1,170 @@
+@mixin flex($direction, $justify, $align){
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+};
+
+.aboutTitle {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: white;
+  font-weight: bolder;
+  &__aboutSpan {
+    color: #3b83f7;
+  }
+}
+
+.abMainSect {
+  @include flex(row, center, center);
+  // display: flex;
+  // align-items: center;
+  // justify-content: center;
+  flex-wrap: wrap;
+  padding: 0 2rem;
+  gap: 50px;
+
+  &__abDivImg {
+    display: flex;
+    background-color: white;
+    border: 3px solid #3b83f7;
+
+    .abDivImg__abImg {
+      display: flex;
+      width: 15rem;
+    }
+  }
+  &__info {
+    width: 40%;
+    justify-self: flex-start;
+  }
+
+  &__title1 {
+    color: white;
+  }
+  
+  &__par1 {
+    color: white;
+  }
+}
+
+.aboutSect {
+  display: flex;
+  flex-direction: column;
+  padding: 0 5rem;
+  gap: 2rem;
+  margin-top: 1rem;
+
+  &__div {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: white;
+    letter-spacing: 0.5px;
+    margin-top: 2rem;
+  }
+
+  .servSec {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 0.8rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+
+    &__hover{
+      transition: all 0.5s ease;
+
+      &:hover{
+        transform: translateY(-15px);
+      }
+    }
+
+    &__servDiv {
+      display: flex;
+      flex-direction: column;
+      padding: 1rem 1rem;
+      width: 22rem;
+      height: 28rem;
+      border: 3px solid #3b83f7;
+      border-radius: 5px;
+      background-color: white;
+      box-shadow: 15px 15px 40px black;
+      gap: 0.5rem;
+      text-align: center;
+    }
+
+    &__img {
+      height: 15rem;
+    }
+    
+    &__title {
+      color: black;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      font-size: x-large;
+    }
+
+    .aboutSpan{
+      color: #3b83f7;
+    }
+    
+    &__par {
+      color: black;
+    }
+  }
+}
+
+/*-------------------------------------------J------------------------------------------------*/
+/*------------------------------------------QUE-----------------------------------------------*/
+/*------------------------------------------RYS-----------------------------------------------*/
+@media screen and (max-width: 768px) {
+  .aboutSect__info {
+    width: 80%;
+  }
+
+  .servSec {
+    gap: 10rem;
+
+    &__servDiv {
+      margin-top: 2rem;
+    }
+
+    &__title {
+      text-align: center;
+      margin-top: 1rem;
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+
+  .abMainSect__info{
+    text-align: center;
+    width: 80%;
+  }
+
+  .aboutSect{
+    
+  .servSec {
+    margin-top: 1rem;
+    gap: 3rem 12rem;
+
+    &__servDiv {
+      width: 16rem;
+      height: 26rem;
+    }
+
+    &__title {
+      text-align: center;
+    }
+
+    &__par {
+      text-align: center;
+    }
+  }
+}
+}
+
+

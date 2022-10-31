@@ -1,0 +1,121 @@
+#conMain {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: white;
+}
+
+.conTitle {
+  margin-top: 1rem;
+  text-align: center;
+  color: black;
+  font-weight: bolder;
+  letter-spacing: 0.2px;
+}
+
+.conSpan {
+  color: #3b83f7;
+}
+
+.conPar {
+  color: black;
+  text-align: center;
+  letter-spacing: 0.2px;
+  font-size: 18px;
+  padding: 1rem 8rem;
+}
+
+.formDiv {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0 8rem;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+
+  &__name {
+    border-radius: 3px;
+    border: 3px solid #3b83f7;
+    text-align: start;
+    padding: 10px;
+    height: 50px;
+    width: 31.875rem;
+  }
+
+  &__mail {
+    border-radius: 3px;
+    border: 3px solid #3b83f7;
+    text-align: start;
+    padding: 10px;
+    height: 50px;
+    width: 510px;
+  }
+  
+  &__message {
+    padding: 10px;
+    width: 510px;
+    border-radius: 3px;
+    border: 3px solid #3b83f7;
+    resize: none;
+  }
+  
+  &__btn {
+    height: 3rem;
+    width: 8rem;
+    border-radius: 3px;
+    background-color: #3b83f7;
+    border: none;
+    color: white;
+    font-size: 16px;
+    box-shadow: 1px 5px 8px #185dcd;
+    cursor: pointer;
+    transition: all 0.4s ease;
+  }
+  &__btn:hover {
+    color: #3b83f7;
+    background-color: white;
+    border: 1px solid white;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .formDiv__name {
+    width: 26rem;
+  }
+
+  .formDiv__mail {
+    width: 26rem;
+  }
+
+  .formDiv__message {
+    width: 26rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+    .conPar {
+        padding: 1rem 2rem;
+      }
+  
+      .formDiv__name {
+        width: 18rem;
+      }
+  
+      .formDiv__mail {
+        width: 18rem;
+      }
+  
+      .formDiv__message {
+        width: 18rem;
+      }
+  
+      .formDiv__btn {
+        align-self: center;
+      }
+    }

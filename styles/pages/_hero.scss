@@ -1,0 +1,155 @@
+#indexBody {
+    display: flex;
+    flex-direction: column;
+    background-image: url(../images/homeoffice3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-color: #111;
+    min-height: 80vh;
+}
+
+#mainIndex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    font-size: xx-large;
+    overflow: hidden;
+    text-shadow: 6px 4px 8px rgb(32, 31, 31);
+    flex-grow: 1;
+    
+    main {
+        display: flex;
+        flex-grow: 1;
+
+    .heroDiv {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-grow: 1;
+    }
+
+    .mainIndex__mainTitle{
+        line-height: 1;
+        letter-spacing: 1px;
+        font-size: 3rem;
+        font-weight: bolder;
+        text-shadow: none;
+        font-family: 'Poppins', sans-serif;
+        background: linear-gradient( 50deg, #09539e, #245bb4, #2174f0, #3b83f0, #5e99f1, #76a5ed, #5e99f1, #3b83f0, #2174f0, #245bb4, #09539e);
+        background-size: 400%;
+        filter: opacity(1.5);
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        animation: animate 20s  infinite;
+    }
+
+    @keyframes animate{
+        0% {
+            background-position: 0%;
+        }
+        100% {
+            background-position: 300%;
+        }
+        
+    }
+
+    .mainIndex__mainSubtitle {
+        font-weight: 500;
+        font-size: xx-large;
+        margin-bottom: 1rem;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    button.learn-more {
+        position: relative;
+        display: inline-block;
+        cursor: pointer;
+        outline: none;
+        border: 0;
+        vertical-align: middle;
+        text-decoration: none;
+        background: transparent;
+        padding: 0;
+        font-size: inherit;
+        font-family: inherit;
+        width: 12rem;
+        height: auto;
+    }
+       
+    button.learn-more .circle {
+        transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+        position: relative;
+        display: block;
+        margin: 0;
+        width: 3rem;
+        height: 3rem;
+        background: #0966c3;
+        border-radius: 1.625rem;
+    }
+       
+    button.learn-more .circle .icon {
+        transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        background: #fff;
+    }
+       
+    button.learn-more .circle .icon.arrow {
+        transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+        left: 0.625rem;
+        width: 1.125rem;
+        height: 0.125rem;
+        background: none;
+    }
+       
+    button.learn-more .circle .icon.arrow::before {
+        position: absolute;
+        content: "";
+        top: -0.29rem;
+        right: 0.0625rem;
+        width: 0.625rem;
+        height: 0.625rem;
+        border-top: 0.125rem solid #fff;
+        border-right: 0.125rem solid #fff;
+        transform: rotate(45deg);
+    }
+       
+    button.learn-more .button-text {
+        transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding: 0.75rem 0;
+        margin: 0 0 0 1.85rem;
+        color: #aeaeae;
+        letter-spacing: 1px;
+        font-size: medium;
+        font-weight: 700;
+        line-height: 1.6;
+        text-align: center;
+        text-transform: uppercase;
+    }
+       
+    button:hover .circle {
+        width: 100%;
+    }
+       
+    button:hover .circle .icon.arrow {
+        background: #fff;
+        transform: translate(1rem, 0);
+    }
+       
+    button:hover .button-text {
+        color: white;
+    }
+}
+}

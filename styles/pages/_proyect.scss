@@ -1,0 +1,203 @@
+#proBody {
+  background-color: #191a1c;
+  font-family: "Poppins", sans-serif;
+}
+.proMain {
+  padding: 0 5rem;
+
+  &__proTitle {
+    color: white;
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+    font-weight: bolder;
+  }
+
+  &__proSpan {
+    color: #3b82f4;
+  }
+}
+.proSection {
+  display: grid;
+  gap: 4rem;
+  align-items: center;
+  justify-items: center;
+
+  &__proyectDiv {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    gap: 2rem;
+  }
+}
+.divProImg {
+  display: flex;
+  justify-content: center;
+
+  &__proImg {
+    width: 85%;
+    height: 100%;
+    border: 1px solid black;
+    border-radius: 4px;
+    box-shadow: 10px 10px 30px rgb(30, 30, 30);
+  }
+}
+.divProDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 15px 15px;
+  gap: 0.8rem;
+
+  &__proSubtitle {
+    color: #0966c3;
+    text-align: start;
+    font-size: x-large;
+    letter-spacing: 0.5px;
+  }
+}
+.proList {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+
+  &__bold {
+    color: grey;
+  }
+  &__item {
+    margin: 0 0.5rem;
+    font-weight: 500;
+  }
+
+  // .bxl-html5 {
+  //   color: #dd4b24;
+  // }
+
+  // .bxl-css3 {
+  //   color: #2174f8;
+  // }
+
+  // .bxl-javascript {
+  //   color: #f0d81e;
+  // }
+
+  // .bxl-bootstrap {
+  //   color: #7a52b3;
+  // }
+}
+.proPar {
+  text-align: start;
+  color: white;
+  letter-spacing: 0.5px;
+  margin: 0;
+}
+
+.btnDiv {
+  display: flex;
+  gap: 1rem;
+
+  &__proBtn {
+    width: 7rem;
+    padding: 0.8rem 0;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+
+    &--dark {
+      background-color: #3b82f6;
+      border: 2px solid #1953b2;
+      color: white;
+    }
+
+    &--light {
+      border: 2px solid #2673ed;
+      color: #3b82f6;
+    }
+  }
+  &__proBtn:hover {
+    background: #0b63f3;
+    border: 2px solid #0b63f3;
+    color: white;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .proSection__proyectDiv {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .divProDiv {
+    align-items: center;
+  }
+
+  .divProDiv__proList {
+    margin: 0;
+  }
+
+  .proPar {
+    text-align: center;
+    padding: 0 2rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .proMain {
+    padding: 0 2rem;
+  }
+  .proSection__proyectDiv {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .divProImg {
+    align-items: flex-end;
+
+    &__proImg {
+      height: 15rem;
+      width: auto;
+    }
+  }
+
+  .divProDiv {
+    justify-content: flex-start;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .proMain {
+    padding: 0;
+
+    &__proTitle {
+      margin-bottom: 3rem;
+    }
+  }
+
+  .proSection {
+    gap: 1.5rem;
+  }
+
+  .divProImg__proImg {
+    height: auto;
+    width: 80%;
+  }
+}
+
+$tools: (
+  html5: #dd4b24,
+  css3: #2174f8,
+  bootstrap: #7a52b3,
+  javascript: #f0d81e,
+);
+
+@each $tool, $colordered in $tools {
+  .proList__item{
+  .bxl-#{$tool} {
+    color: $colordered;
+  }
+}
+}

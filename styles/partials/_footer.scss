@@ -1,0 +1,30 @@
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 6vh;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+
+    .bx.footIcon {
+        font-size: 3rem;
+        margin: 0 1rem;
+        color: white;
+    }
+
+    .bxl-github{
+        transition: all .5s ease;
+
+        &:hover {
+            transform: translateY(-10px);
+            color: #0966c3;
+        }
+    }
+    
+    .bxl-linkedin {
+        @extend .bxl-github
+    }
+    .bxl-gmail {
+        @extend .bxl-github
+    }
+}
